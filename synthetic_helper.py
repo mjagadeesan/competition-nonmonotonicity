@@ -74,7 +74,7 @@ def compute_bayes_optimal_setting2(sigma, trial_num=1):
     D = 2
 
     max_iter_loop = 10000
-    (model_parameters, opt_loss) = compute_bayes_optimal_helper(D, sigma, mean0, mean1, probs, temperature, input_dist=input_dist)
+    (model_parameters, opt_loss) = compute_bayes_optimal_helper(D, sigma, mean0, mean1, probs, input_dist=input_dist)
     np.savez('./data-synthetic-experiments/bayes_sigma-trial-'+str(trial_num) + '-sigma-' + str(sigma) + '.npz', opt_loss=opt_loss)
 
 ## Compute Nash equilibrium and Bayes optimal for Setting 3
@@ -101,5 +101,5 @@ def compute_bayes_optimal_setting3(D, trial_num=1):
 
     max_iter_loop = 10000
     (model_parameters, opt_loss) = compute_bayes_optimal_helper(D, sigma, mean0, mean1, probs, input_dist=input_dist, probs_subpopulations=probs_subpopulations)
-    np.savez('./data-synthetic-experiments/bayes_alpha-trial-'+str(trial_num) + '-alpha-' + str(alpha) + '.npz', opt_loss=opt_loss)
+    np.savez('./data-synthetic-experiments/bayes_Dreal-trial-'+str(trial_num) + '-alpha-' + str(alpha) + '.npz', opt_loss=opt_loss)
 
