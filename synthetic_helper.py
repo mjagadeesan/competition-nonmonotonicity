@@ -25,7 +25,6 @@ def compute_bayes_optimal_helper(D, sigma, mean0, mean1, probs, temperature=0.1,
 
 def nash_equilibrium_helper(w, num_players, D, sigma, mean0, mean1, probs, temperature=0.1, learning_rate=1e-1, max_iter_loop=5000, tol=1e-3, max_iter=100, input_dist='noisy', probs_subpopulations=None):
     c = 0.3
-    stdev_input = 1.0
     input = 'synthetic'
     X, Y = synthetic_data.create_distributions_input(D, sigma, mean0, mean1, probs, probs_subpopulations, input_dist)
 
