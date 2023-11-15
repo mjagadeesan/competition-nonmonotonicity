@@ -79,6 +79,7 @@ def compute_bayes_optimal_setting2(sigma, trial_num=1):
 
 ## Compute Nash equilibrium and Bayes optimal for Setting 3
 def compute_nash_equilibria_setting3(m, D, trial_num=1):
+    D = int(D)
     w = torch.ones(m)
     mean0 = -1
     mean1 = 1
@@ -92,6 +93,7 @@ def compute_nash_equilibria_setting3(m, D, trial_num=1):
     np.savez('./data-synthetic-experiments/nash_Dreal-trial-'+str(trial_num) + 'm-' + str(m) + '-D-' + str(D) + '.npz', social_loss=social_loss_new)
 
 def compute_bayes_optimal_setting3(D, trial_num=1):
+    D = int(D)
     mean0 = -1
     mean1 = 1
     sigma = 1.0
