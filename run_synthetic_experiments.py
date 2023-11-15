@@ -11,7 +11,7 @@ def run_functions(trial_num, num_players, solution, setting_no, dist_arg):
         synthetic_helper.compute_bayes_optimal_setting2(dist_arg, trial_num=trial_num)
 
     elif solution == 'bayes' and setting_no == 3:
-        synthetic_helper.compute_bayes_optimal_setting3(num_players, trial_num=trial_num)
+        synthetic_helper.compute_bayes_optimal_setting3(dist_arg, trial_num=trial_num)
 
     elif solution == 'nash' and setting_no == 1:
         synthetic_helper.compute_nash_equilibria_setting1(num_players, dist_arg, trial_num=trial_num)

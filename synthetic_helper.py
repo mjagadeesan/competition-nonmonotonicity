@@ -101,5 +101,5 @@ def compute_bayes_optimal_setting3(D, trial_num=1):
 
     max_iter_loop = 10000
     (model_parameters, opt_loss) = compute_bayes_optimal_helper(D, sigma, mean0, mean1, probs, input_dist=input_dist, probs_subpopulations=probs_subpopulations)
-    np.savez('./data-synthetic-experiments/bayes_Dreal-trial-'+str(trial_num) + '-alpha-' + str(alpha) + '.npz', opt_loss=opt_loss)
+    np.savez('./data-synthetic-experiments/bayes_Dreal-trial-'+str(trial_num) + '-D-' + str(D) + '.npz', opt_loss=opt_loss)
 
